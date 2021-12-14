@@ -1,5 +1,6 @@
-<?php
+s (54 sloc)  2.26 KB
 
+<?php
 /**
  * Use PHP documentation for the task.
  *
@@ -14,23 +15,44 @@ echo 'Basic string: ';
 var_dump($basicString);
 echo '<br><br>';
 
+
+/** Convert characters to uppercase */
+echo 'String in uppercase => ';
+echo strtoupper($basicString);
+echo '<br><br>';
+
 /** Convert characters to lowercase */
+echo 'String in lowercase => ';
 echo strtolower($basicString);
 echo '<br><br>';
 
-//Follow the rest of the instructions
-
-/** Convert characters to uppercase */
-
-/** Convert characters to lowercase */
-
 /** Removes whitespace from the right end of a string */
+
+echo 'Removes whitespace from the right end of a string => ';
+var_dump (rtrim($basicString));
+echo '<br><br>';
 
 /** Removes whitespace from the left and right side of a string */
 
+echo 'Removes whitespace from the left and right side of a string => ';
+var_dump (trim($basicString));
+echo '<br><br>';
+
 /** Converts the first letter (not space) of a string to lowercase */
 
+echo 'Converts the first letter (not space) of a string to lowercase => ';
+$basicString = ltrim($basicString); // Remove space from the beginning (left side)
+var_dump (lcfirst($basicString));
+echo '<br><br>';
+
 /** Split a string into two strings, the second string must start with 9 */
+
+echo 'Split a string into two strings, the second string must start with 9 => ';
+$basicString = str_replace(' ', '', $basicString);
+$separator = 'X';
+$basicString = explode($separator, $basicString);
+var_dump ($basicString);
+echo '<br><br>';
 
 /** Combine two strings into one */
 
