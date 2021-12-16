@@ -1,5 +1,3 @@
-s (54 sloc)  2.26 KB
-
 <?php
 /**
  * Use PHP documentation for the task.
@@ -48,15 +46,33 @@ echo '<br><br>';
 /** Split a string into two strings, the second string must start with 9 */
 
 echo 'Split a string into two strings, the second string must start with 9 => ';
+echo '<br><br>';
 $basicString = str_replace(' ', '', $basicString);
-$separator = 'X';
-$basicString = explode($separator, $basicString);
-var_dump ($basicString);
+$firstString = substr($basicString, 0, 15);
+$secondBasicString = strchr($basicString, "9");
+echo 'First String =>' . $firstString;
+echo '<br><br>';
+echo 'Second string start with 9 => ' . $secondBasicString;
 echo '<br><br>';
 
 /** Combine two strings into one */
 
+echo 'Combine two string into one => ';
+$a = 'StringOne';
+$b = 'StringTwo';
+$result = $a . $b;
+echo '<br><br>';
+echo 'First string =>' . ' ' . $a;
+echo '<br><br>';
+echo 'Second string =>' . ' ' . $b;
+echo '<br><br>';
+echo 'Two strings into one =>' . ' ' . $result;
+echo '<br><br>';
+
+
 /** At the beginning of the string, add <h1>, at the end of the string </h1> */
+
+
 
 /** Complete the string to 50 characters long by adding "_" to the end */
 
