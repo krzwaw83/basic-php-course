@@ -48,9 +48,9 @@ echo '<br><br>';
 echo 'Split a string into two strings, the second string must start with 9 => ';
 echo '<br><br>';
 $basicString = str_replace(' ', '', $basicString);
-$firstString = substr($basicString, 0, 15);
+$firstBasicString = substr($basicString, 0, 15);
 $secondBasicString = strchr($basicString, "9");
-echo 'First String =>' . $firstString;
+echo 'First String =>' . $firstBasicString;
 echo '<br><br>';
 echo 'Second string start with 9 => ' . $secondBasicString;
 echo '<br><br>';
@@ -72,7 +72,12 @@ echo '<br><br>';
 
 /** At the beginning of the string, add <h1>, at the end of the string </h1> */
 
-
+$prefix = "<h1>";
+$suffix = "</h1>";
+echo "At the beginning of the string, add , at the end of the string ";
+echo '<br><br>';
+echo htmlspecialchars($prefix . $basicString . $suffix);
+echo '<br><br>';
 
 /** Complete the string to 50 characters long by adding "_" to the end */
 
