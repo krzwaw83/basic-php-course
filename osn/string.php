@@ -75,7 +75,7 @@ echo '<br><br>';
 $basicString = ' AbcdEfGhjiKLMNX9 qrtstyAwp12x  ';
 $prefix = "<h1>";
 $suffix = "</h1>";
-echo 'At the beginning of the string, add , at the end of the string => ';
+echo 'At the beginning of the string, add < h1 > , at the end of the string < /h1 > => ';
 echo '<br><br>';
 echo htmlspecialchars($prefix . $basicString . $suffix);
 echo '<br><br>';
