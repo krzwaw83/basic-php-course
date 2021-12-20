@@ -72,16 +72,25 @@ echo '<br><br>';
 
 /** At the beginning of the string, add <h1>, at the end of the string </h1> */
 
+$basicString = ' AbcdEfGhjiKLMNX9 qrtstyAwp12x  ';
 $prefix = "<h1>";
 $suffix = "</h1>";
-echo "At the beginning of the string, add , at the end of the string ";
+echo 'At the beginning of the string, add , at the end of the string => ';
 echo '<br><br>';
 echo htmlspecialchars($prefix . $basicString . $suffix);
 echo '<br><br>';
 
 /** Complete the string to 50 characters long by adding "_" to the end */
 
+echo 'Complete the string to 50 characters long by adding "_" to the end => ';
+echo str_pad($basicString, 82, "_", STR_PAD_RIGHT);
+echo '<br><br>';
+
+
 /** Complete the string to 50 characters long by adding "_" to the beginning */
+echo 'Complete the string to 50 characters long by adding "_" to the beginning => ';
+echo str_pad($basicString, 82, "_", STR_PAD_LEFT);
+echo '<br><br>';
 
 /** Replace all occurrences of "A" with "@" */
 
