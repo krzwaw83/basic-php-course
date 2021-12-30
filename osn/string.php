@@ -40,15 +40,17 @@ echo '<br><br>';
 
 echo '4) Converts the first letter (not space) of a string to lowercase => ';
 $basicString = ltrim($basicString); // Remove space from the beginning (left side)
-var_dump (lcfirst($basicString));
+$basicString = lcfirst($basicString);
+$basicString = ' ' . $basicString;
+var_dump ($basicString);
 echo '<br><br>';
 
 /** Split a string into two strings, the second string must start with 9 */
 
 echo '5) Split a string into two strings, the second string must start with 9 => ';
 echo '<br><br>';
-$basicString = str_replace(' ', '', $basicString);
-$firstBasicString = substr($basicString, 0, 15);
+$basicString = ' AbcdEfGhjiKLMNX9 qrtstyAwp12x ';
+$firstBasicString = substr($basicString, 0, 16);
 $secondBasicString = strchr($basicString, "9");
 echo 'First String =>' . $firstBasicString;
 echo '<br><br>';
@@ -58,15 +60,16 @@ echo '<br><br>';
 /** Combine two strings into one */
 
 echo '6) Combine two string into one => ';
-$a = 'StringOne';
-$b = 'StringTwo';
-$result = $a . $b;
+$result = $firstBasicString . $secondBasicString;
 echo '<br><br>';
-echo 'First string =>' . ' ' . $a;
+echo 'First string =>' . ' ' . $firstBasicString;
 echo '<br><br>';
-echo 'Second string =>' . ' ' . $b;
+echo 'Second string =>' . ' ' . $secondBasicString;
 echo '<br><br>';
-echo 'Two strings into one =>' . ' ' . $result;
+echo 'Two strings into one I methode =>' . ' ' . $result;
+echo '<br><br>';
+echo 'Two strings into one II methode =>';
+echo printf("%s%s", $firstBasicString, $secondBasicString);
 echo '<br><br>';
 
 
@@ -83,13 +86,13 @@ echo '<br><br>';
 /** Complete the string to 50 characters long by adding "_" to the end */
 
 echo '8) Complete the string to 50 characters long by adding "_" to the end => ';
-echo str_pad($basicString, 82, "_", STR_PAD_RIGHT);
+echo str_pad($basicString, 50, "_", STR_PAD_RIGHT);
 echo '<br><br>';
 
 
 /** Complete the string to 50 characters long by adding "_" to the beginning */
 echo '9) Complete the string to 50 characters long by adding "_" to the beginning => ';
-echo str_pad($basicString, 82, "_", STR_PAD_LEFT);
+echo str_pad($basicString, 50, "_", STR_PAD_LEFT);
 echo '<br><br>';
 
 /** Replace all occurrences of "A" with "@" */
@@ -119,21 +122,14 @@ echo '<br><br>';
 /** Replace the string with a random string */
 
 echo '14) Replace the string with a random string => ';
-function generateRandomString($length = 10) {
-    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
-}
-$search = 'qrtstyAwp12x';
-$randomString = generateRandomString();
-echo str_replace($search, $randomString, $basicString);
+echo str_replace($basicString, str_shuffle($basicString), $basicString);
 echo '<br><br>';
 
 /** Replace a string with an array where each element is a single character */
 
 echo '15) Replace a string with an array where each element is a single character => ';
 $basicString = ' AbcdEfGhjiKLMNX9 qrtstyAwp12x  ';
-$search = array("AbcdEfGhjiKLMNX9", "qrtstyAwp12x");
-$replace = array('A', 'B');
-echo str_replace($search, $replace, $basicString);
+var_dump (str_split($basicString));
 echo '<br><br>';
 
 /** Rewrite the string in reverse order */
