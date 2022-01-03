@@ -16,6 +16,10 @@ echo 'Basic number: ';
 var_dump($basicNumber);
 echo '<br><br>';
 
+echo 'Basic number float: ';
+var_dump($basicFloat);
+echo '<br><br>';
+
 /** Generate random number */
 echo rand();
 echo '<br><br>';
@@ -24,13 +28,40 @@ echo '<br><br>';
 
 /** Increment $basicNumber by 1 */
 
+echo 'Basic number increment by 1 : ';
+$basicNumber++;
+echo $basicNumber;
+echo '<br><br>';
+
+
 /** Decrement $basicNumber by 1 */
+
+echo 'Basic number decrement by 1 : ';
+
+$basicNumber = 123456;
+$basicNumber--;
+echo $basicNumber;
+echo '<br><br>';
 
 /** Convert $basicNumber to a floating point number with two decimal places - expected 123456.00 */
 
+echo 'Convert $basicNumber to a floating point number with two decimal places :';
+$basicNumber = 123456;
+echo number_format((float)$basicNumber, 2, '.', '');
+echo '<br><br>';
+
 /** Convert $basicFloat to integer */
 
+echo 'Convert $basicFloat to integer  :';
+echo intval($basicFloat);
+echo '<br><br>';
+
+
 /** Convert $basicFloat to boolean */
+
+echo 'Convert $basicFloat to boolean  :';
+echo boolval($basicFloat);
+echo '<br><br>';
 
 /** Converts $basicFloat to a floating point number with two decimal places - expected: 123.45 */
 
